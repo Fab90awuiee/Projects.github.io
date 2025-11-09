@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Собираем ПК</title>
-    <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest"></script>
+    <script src="js/accordeone.js" defer></script>
+    <script src="js/model.js" defer></script>
+    <script src="js/smoothScrool.js" defer></script>
+    <script src="js/openModal.js.js" defer></script>
 </head>
 
 <body>
@@ -19,9 +23,9 @@
             </a>
             <div class="header__menu">
                 <nav class="header__nav block-center-horis">
-                    <a href="#">Чем занимаемся</a>
-                    <a href="#">Процесс работы</a>
-                    <a href="#">Команда</a>
+                    <a href="#work">Чем занимаемся</a>
+                    <a href="#procec">Процесс работы</a>
+                    <a href="#command">Команда</a>
                 </nav>
                 <button class="button header__button">Зайти в кабинет</button>
             </div>
@@ -89,7 +93,7 @@
             </div>
         </div>
 
-        <section class="work">
+        <section class="work" id="work">
             <div class="container">
                 <div class="work__wrap">
                     <div class="work__img">
@@ -106,7 +110,7 @@
             </div>
         </section>
 
-        <section class="process">
+        <section class="process" id="procec">
             <div class="container">
                 <div class="process__wrap">
                     <div class="process__title block-center-horis">
@@ -204,7 +208,7 @@
             </div>
         </section>
 
-        <section class="command">
+        <section class="command" id="command">
             <div class="container">
                 <div class="process__title command__title">
                     <div class="process__img command__img-title">
@@ -266,7 +270,7 @@
         </section>
     </main>
 
-    <form action="#" class="modal block-center">
+    <form action="#" class="modal block-center" style="display: none;">
         <div class="modal__inner">
             <div class="modal__header">Заявка на сборку ПК</div>
             <div class="modal__subheader">Мы свяжемся с вами, чтобы обсудить детали заказа</div>
