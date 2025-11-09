@@ -1,15 +1,16 @@
-const modalBtn = document.querySelector('.modal__button')
-const modal = document.querySelector('.modal')
+document.querySelectorAll('.program-line__title').forEach(title => {
+    title.addEventListener('click', function () {
+        const currentDescr = this.nextElementSibling;
 
-modalBtn.addEventListener('click', () => {
-    modal.style.display = 'flex'
-})
+        if (!currentDescr.classList.contains('active')) {
+            document.querySelectorAll('.program-line__descr.active').forEach(descr => {
+                descr.classList.remove('active');
+            });
+
+            currentDescr.classList.add('active');
+        }
+    });
+});
 
 
-modal.addEventListener('click', (event) => {
-    const modalContent = event.target.closest('.modal__inner')
-    console.log(modalContent);
-    if (!modalContent) {
-        modal.style.display = ''
-    }
-})
+
